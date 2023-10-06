@@ -19,10 +19,15 @@ jobs:
 
       - name: Building TCET Linux Welcome Tar file
         run: |
-          touch tcet-linux-tk.tar.gz
-          tar -czf tcet-linux-tk.tar.gz --exclude=tcet-linux-tk.tar.gz .
+          ls -la
+          cd ..
+          ls -la
+          tar -czf tcet-linux-tk.tar.gz tcet-linux-tk/
           touch checksum
           sha256sum tcet-linux-tk.tar.gz > checksum
+          mv checksum tcet-linux-tk/
+          mv tcet-linux-tk.tar.gz tcet-linux-tk/
+          ls -la
           
       - name: Delete Previous Latest release
         uses: dev-drprasad/delete-tag-and-release@v1.0
