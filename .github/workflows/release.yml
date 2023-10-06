@@ -36,7 +36,7 @@ jobs:
         with:
           artifacts: "*.tar.gz,checksum"
           generateReleaseNotes: false
-          name: "TCET-Linux-Lsb-release"
+          name: "TCET-Linux-tk"
           tag: ${{ env.DATE }}
 
       - name: Release Tar File with latest
@@ -44,7 +44,7 @@ jobs:
         with:
           artifacts: "*.tar.gz,checksum"
           generateReleaseNotes: false
-          name: "TCET-Linux-Lsb-release"
+          name: "TCET-Linux-tk"
           tag: latest  
 
       
